@@ -128,12 +128,13 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 
 [[拿起王冠|2]]
 &lt;&lt;/linkreplace&gt;&gt;\</tw-passagedata><tw-passagedata pid="3" name="StoryInit" tags="" position="550,25" size="100,100">&lt;&lt;silently&gt;&gt;
+
 &lt;&lt;script&gt;&gt;Config.history.controls = false;&lt;&lt;/script&gt;&gt;
 &lt;&lt;set $gameLoaded = false&gt;&gt;
 &lt;&lt;set $listOn = false&gt;&gt;
 &lt;&lt;set $day = 0&gt;&gt;
 &lt;&lt;set $hour = 6&gt;&gt;
-&lt;&lt;set $hashHyacinus = false&gt;&gt;
+&lt;&lt;set $hasHyacinus = false&gt;&gt;
 &lt;&lt;set $hyacinuspromote = false&gt;&gt;
 &lt;&lt;set $hyacinusOut = false&gt;&gt;
 
@@ -152,6 +153,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
     velisarius: false,
     serapia: false
 }&gt;&gt;
+
 &lt;&lt;script&gt;&gt;
 window.changeAffection = function(char, delta) {
     var newValue = State.variables.affection[char] + delta;
@@ -273,8 +275,7 @@ Hour: $hour:00
 [[前往大厅|Hyacinus1]] </tw-passagedata><tw-passagedata pid="18" name="things" tags="" position="700,1075" size="100,100">你处理了一些政务。
 &lt;&lt;set $hour += 2&gt;&gt;
 
-[[结束工作|bedroom]] </tw-passagedata><tw-passagedata pid="19" name="JudithRoom" tags="place" position="825,825" size="100,100">&lt;&lt;silently&gt;&gt;\
-&lt;&lt;if $hour &gt;= 24&gt;&gt;\
+[[结束工作|bedroom]] </tw-passagedata><tw-passagedata pid="19" name="JudithRoom" tags="place" position="825,825" size="100,100">&lt;&lt;if $hour &gt;= 24&gt;&gt;\
     &lt;&lt;goto &quot;deepnight&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 这里是皇后的寝宫，房间正中央放置着一尊巨大的喉管之母圣象。
@@ -286,7 +287,6 @@ Hour: $hour:00
 &lt;&lt;else&gt;&gt;\
     &lt;&lt;set $queenHere = false&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;/silently&gt;&gt;\
 &lt;&lt;if $queenHere&gt;&gt;\
 朱迪丝正在她的寝宫中。
 
@@ -458,8 +458,7 @@ Hour: $hour:00
 &lt;&lt;/choose&gt;&gt;\
 
 &lt;&lt;set $hour += 2&gt;&gt;\
-[[结束谈话|JudithRoom]] </tw-passagedata><tw-passagedata pid="31" name="HyacinusBed" tags="place" position="825,950" size="100,100">&lt;&lt;silently&gt;&gt;\
-&lt;&lt;if $hour &gt;= 24&gt;&gt;\
+[[结束谈话|JudithRoom]] </tw-passagedata><tw-passagedata pid="31" name="HyacinusBed" tags="place" position="825,950" size="100,100">&lt;&lt;if $hour &gt;= 24&gt;&gt;\
     &lt;&lt;goto &quot;deepnight&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 雅辛乌斯坐在他窄小的床位上，身上穿着专门的白色长袍，这令他无法携带或藏匿任何事物。
@@ -531,8 +530,7 @@ Hour: $hour:00
 &lt;br&gt;
 &lt;&lt;set $hour += 2&gt;&gt;\
 [[结束谈话|HyacinusBed]] </tw-passagedata><tw-passagedata pid="35" name="HyacinusChat3" tags="" position="1275,950" size="100,100">&lt;&lt;set $hour += 2&gt;&gt;\
-[[结束谈话|HyacinusBed]] </tw-passagedata><tw-passagedata pid="36" name="outside" tags="place" position="825,1075" size="100,100">&lt;&lt;silently&gt;&gt;\
-&lt;&lt;if $hour &gt;= 24&gt;&gt;\
+[[结束谈话|HyacinusBed]] </tw-passagedata><tw-passagedata pid="36" name="outside" tags="place" position="825,1075" size="100,100">&lt;&lt;if $hour &gt;= 24&gt;&gt;\
     &lt;&lt;goto &quot;deepnight&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 你来到王宫外。&lt;&lt;if $HyacinusOut == true&gt;&gt;雅辛乌斯在你身边。&lt;&lt;/if&gt;&gt;
@@ -541,19 +539,20 @@ Hour: $hour:00
 [[“狼窝”|bordello]]
 
 [[返回王宫|common][$HyacinusOut = false]]
-</tw-passagedata><tw-passagedata pid="37" name="senate" tags="place" position="825,1200" size="100,100">&lt;&lt;silently&gt;&gt;\
-&lt;&lt;if $hour &gt;= 24&gt;&gt;\
+</tw-passagedata><tw-passagedata pid="37" name="senate" tags="place" position="825,1200" size="100,100">&lt;&lt;if $hour &gt;= 24&gt;&gt;\
     &lt;&lt;goto &quot;deepnight&quot;&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="38" name="bordello" tags="place" position="950,1200" size="100,100">&lt;&lt;silently&gt;&gt;\
-&lt;&lt;if $hour &gt;= 24&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
+
+[[离开|outside]] </tw-passagedata><tw-passagedata pid="38" name="bordello" tags="place" position="950,1200" size="100,100">&lt;&lt;if $hour &gt;= 24&gt;&gt;\
     &lt;&lt;goto &quot;deepnight&quot;&gt;&gt;\
-&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="39" name="schola" tags="place" position="575,950" size="100,100">&lt;&lt;silently&gt;&gt;\
-&lt;&lt;if $hour &gt;= 24&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
+
+[[离开|outside]] </tw-passagedata><tw-passagedata pid="39" name="schola" tags="place" position="575,950" size="100,100">&lt;&lt;if $hour &gt;= 24&gt;&gt;\
     &lt;&lt;goto &quot;deepnight&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 这里是军事厅。
 木板上钉了几张褪色的帝国疆域图，实木架子上放着各式文书卷轴，角落里放着几个武器架，上面象征性摆了几支短矛和一面盾牌。
-&lt;&lt;/if&gt;&gt;\
+
 &lt;&lt;if ($hour &gt;= 6 &amp;&amp; $hour &lt;= 8) or ($hour &gt;= 20 &amp;&amp; $hour &lt;= 22)&gt;&gt;\
     &lt;&lt;set $captainHere = true&gt;&gt;\
 &lt;&lt;elseif $hour &gt;= 10 &amp;&amp; $hour &lt;= 18&gt;&gt;\
@@ -561,7 +560,6 @@ Hour: $hour:00
 &lt;&lt;else&gt;&gt;\
     &lt;&lt;set $captainHere = false&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
-&lt;&lt;/silently&gt;&gt;\
 &lt;&lt;if $captainHere&gt;&gt;\
 [[维利萨留|Velisarius]] 
 &lt;&lt;else&gt;&gt;\
