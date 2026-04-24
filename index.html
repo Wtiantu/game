@@ -533,8 +533,9 @@ Hour: $hour:00
 &lt;&lt;/if&gt;&gt;\
 &lt;br&gt;
 &lt;&lt;set $hour += 2&gt;&gt;\
-[[结束谈话|HyacinusBed]] </tw-passagedata><tw-passagedata pid="35" name="HyacinusChat3" tags="" position="1275,950" size="100,100">&lt;&lt;set $hour += 2&gt;&gt;\
-[[结束谈话|HyacinusBed]] </tw-passagedata><tw-passagedata pid="36" name="outside" tags="place" position="825,1075" size="100,100">&lt;&lt;if $hour &gt;= 24&gt;&gt;\
+[[结束谈话|HyacinusBed]] </tw-passagedata><tw-passagedata pid="35" name="HyacinusChat3" tags="" position="1275,950" size="100,100">你要与雅辛乌斯谈论谁？
+
+[[离开|HyacinusBed]] </tw-passagedata><tw-passagedata pid="36" name="outside" tags="place" position="825,1075" size="100,100">&lt;&lt;if $hour &gt;= 24&gt;&gt;\
     &lt;&lt;goto &quot;deepnight&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 你来到王宫外。&lt;&lt;if $HyacinusOut == true&gt;&gt;雅辛乌斯在你身边。&lt;&lt;/if&gt;&gt;
