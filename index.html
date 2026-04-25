@@ -141,6 +141,9 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 &lt;&lt;set $dorosname = false &gt;&gt;
 &lt;&lt;set $iolliusname = false &gt;&gt;
 &lt;&lt;set $whoreinvite = false &gt;&gt;
+&lt;&lt;set $iolliussex = false &gt;&gt;
+&lt;&lt;set $helensex = false &gt;&gt;
+&lt;&lt;set $dorossex = false &gt;&gt;
 &lt;&lt;set $hyacinusjeally = 0&gt;&gt;
 
 &lt;&lt;set $hasHyacinus = false&gt;&gt;
@@ -345,7 +348,7 @@ Hour: $hour:00
 [[睁眼|common]]</tw-passagedata><tw-passagedata pid="17" name="Hyacinus0" tags="things" position="500,325" size="100,100">这是你坐在黄金王座上的第3天。
 
 今日，由帝国出发，意图前往对岸进行贸易的商队回来了。他们带回来许多瓷器香料珠宝，但这些事物对于你充裕的国库而言不值一提。
-令你在意的是，他们声称行至黑海北岸一带时发现了一个少年，在住民普遍皮肤白皙、黑发黑眼的城邦中，他那头金色长发与淡金色的眼睛十分显目。
+令你在意的是，他们声称行至黑海北岸一带时发现了一个少年，在住民普遍皮肤白皙、黑发黑眼的城邦中，他那头金色长发与银色的眼睛十分显目。
 于是，商队将他带回了帝国，并送入王宫中。
 
 [[前往大厅|Hyacinus0.1]] </tw-passagedata><tw-passagedata pid="18" name="things" tags="" position="700,1075" size="100,100">你处理了一些政务。
@@ -423,7 +426,7 @@ Hour: $hour:00
 
 [[离开|JudithRoom]] </tw-passagedata><tw-passagedata pid="24" name="Hyacinus0.1" tags="" position="500,450" size="100,100">大厅中，商人已经将少年牵了过来，朱迪丝和该伊诺斯听闻此事也赶到厅内。所有人正等着你。
 
-“我的主人，我为您献上这位少年！您瞧瞧他:头发简直像金丝织成的绸子一样，眼睛简直像注满太阳光辉的珠宝一样！”
+“我的主人，我为您献上这位少年！您瞧瞧他:头发简直像金丝织成的绸子一样，眼睛简直像注满明月光辉的珠宝一样！”
 商人拉扯少年的手臂，伸手摸过他的金发，向你展示自己所言非虚。
 少年的双脚被两只镣铐束缚，他用有些好奇的目光悄然打量着你。
 
@@ -561,7 +564,7 @@ Hour: $hour:00
 &lt;&lt;if _roll &lt;= 70&gt;&gt;\
 谈话结束，雅辛乌斯在大部分时候只是沉默着聆听你输送自己的观点。
 &lt;&lt;elseif _roll &lt;= 85&gt;&gt;\
-谈话结束，雅辛乌斯淡金色眼眸中似乎焕发光彩。
+谈话结束，雅辛乌斯银色的眼眸中似乎焕发光彩。
 &lt;&lt;script&gt;&gt;changeAffection(&quot;hyacinus&quot;, 1);&lt;&lt;/script&gt;&gt;\
 &lt;&lt;else&gt;&gt;\
 谈话结束，雅辛乌斯到了最后只把头低下，坐在床边晃着自己的双腿。
@@ -951,7 +954,7 @@ Hour: $hour:00
 &lt;&lt;if _roll &lt;= 20&gt;&gt;\
 谈话结束，雅辛乌斯在大部分时候只是沉默着聆听你输送自己的观点。
 &lt;&lt;elseif _roll &lt;= 80&gt;&gt;\
-谈话结束，雅辛乌斯淡金色眼眸中似乎焕发光彩。
+谈话结束，雅辛乌斯银色的眼眸中似乎焕发光彩。
 &lt;&lt;script&gt;&gt;changeAffection(&quot;hyacinus&quot;, 1);&lt;&lt;/script&gt;&gt;\
 &lt;&lt;else&gt;&gt;\
 谈话结束，雅辛乌斯到了最后只把头低下，坐在床边晃着自己的双腿。
@@ -1019,7 +1022,7 @@ Hour: $hour:00
 &lt;&lt;elseif $affection.hyacinus &lt;= 80&gt;&gt;\
 雅辛乌斯从林间找到了许多艳丽的浆果。他将它们缀在为你编织的花环上，调皮地称颂你为“浆果与鲜花的君王”。
 &lt;&lt;else&gt;&gt;\
-雅辛乌斯牵起你的双手，与你在林间玩起他家乡的游戏。他向你谈论起他曾经拥有的幸福或悲伤的时光，牵着你走到泉边，泉水映出他金子般闪烁光泽的发丝，映出他面上带有的满足的笑容。
+雅辛乌斯牵起你的双手，与你在林间玩起他家乡的游戏。他向你谈论起他曾经拥有的幸福或悲伤的时光，牵着你走到泉边，泉水映出他金子般闪烁光泽的发丝，映出他面上那满足的笑容。
 &lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;script&gt;&gt;changeAffection(&quot;hyacinus&quot;, 2);&lt;&lt;/script&gt;&gt;\
@@ -1228,7 +1231,9 @@ Hour: $hour:00
 
 &lt;&lt;script&gt;&gt;addHour(2);&lt;&lt;/script&gt;&gt;\
 [[结束|bordello]] 
-&lt;&lt;set $whoresex += 1&gt;&gt;\</tw-passagedata><tw-passagedata pid="85" name="whorechoose" tags="" position="1200,1175" size="100,100">[[名作海伦的少女|heleninbedroom]]
+&lt;&lt;set $whoresex += 1&gt;&gt;\</tw-passagedata><tw-passagedata pid="85" name="whorechoose" tags="" position="1200,1175" size="100,100">你想叫谁来到你身边？
+
+[[名作海伦的少女|heleninbedroom]]
 [[名作多罗斯的男性|dorosinbedroom]]
 [[名作伊奥琉斯的少年|iolliusinbedroom]]
 
@@ -1248,68 +1253,98 @@ Hour: $hour:00
 [[同床|iolliussleep2]] 
 
 [[离开|bedroom]] </tw-passagedata><tw-passagedata pid="89" name="dorossleep2" tags="" position="1600,1075" size="100,100">多罗斯将你牵到你的床榻上，他是一个风趣又主动的男人。
-&lt;&lt;if $hasHyacinus == true &gt;&gt;\&lt;br&gt;
+&lt;&lt;if $hasHyacinus == true &gt;&gt;\
+
 你很清楚床帷之外有人注意着这一切。
 &lt;&lt;set $hyacinusjeally += 1 &gt;&gt;\
+&lt;&lt;set $dorossex = true &gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;script&gt;&gt;addHour(2);&lt;&lt;/script&gt;&gt;\
 [[结束|bedroom]] </tw-passagedata><tw-passagedata pid="90" name="helensleep2" tags="" position="1600,1175" size="100,100">海伦将你牵到你的床榻上，你知道女人也可以掌控一切吗？
+&lt;&lt;if $hasHyacinus == true &gt;&gt;\
 
-&lt;&lt;if $hasHyacinus == true &gt;&gt;\&lt;br&gt;
 你很清楚床帷之外有人注意着这一切。
 &lt;&lt;set $hyacinusjeally += 1 &gt;&gt;\
+&lt;&lt;set $helensex = true &gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;script&gt;&gt;addHour(2);&lt;&lt;/script&gt;&gt;\
 [[结束|bedroom]] 
 </tw-passagedata><tw-passagedata pid="91" name="iolliussleep2" tags="" position="1700,1075" size="100,100">你将伊奥琉斯牵到你的床榻上，他会因为名为天真的无知而接受一切。
-&lt;&lt;if $hasHyacinus == true &gt;&gt;\&lt;br&gt;
+&lt;&lt;if $hasHyacinus == true &gt;&gt;\
+
 你很清楚床帷之外有人注意着这一切。
 &lt;&lt;set $hyacinusjeally += 2 &gt;&gt;\
+&lt;&lt;set $iolliussex = true &gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;script&gt;&gt;addHour(2);&lt;&lt;/script&gt;&gt;\
 [[结束|bedroom]] </tw-passagedata><tw-passagedata pid="92" name="hyacinusjeally" tags="" position="1475,950" size="100,100">这里是你的寝宫。
+&lt;&lt;if $affection.hyacinus &lt;= 80&gt;&gt;\
 
 &quot;奥古斯图。&quot;雅辛乌斯开口叫你，走过来坐到你床边，&quot;你最近总是喜欢叫外面那些人过来啊，怎么了，你是很喜欢他们吗？&quot;
 &quot;我有什么想法？算了，我能有什么想法呢。毕竟我没有这种权利。我只是想问...你的臣民与妻子不会对此产生意见么？你是帝国的主人、&#39;至尊的奥古斯图&#39;，难道不应该多把注意力放在政务上吗？&quot;
 雅辛乌斯没完没了地抱怨起来。
+&lt;&lt;else&gt;&gt;\
 
-&lt;&lt;if not $choiceMade&gt;&gt;
+你一进门，雅辛乌斯就踏着轻快的步子走到你身侧，他挽起你的胳膊。
+“我不喜欢那些人…哦，就是你最近唤来的那些——外边的人。他们有什么意思呢？他们每一个莫不是长了张随处可见的脸，有一双随处可见的眼吗？”他耸肩，眼神上瞟，似乎是翻了个白眼，“你别叫他们来了，我真不喜欢他们。”
+&lt;&lt;if $helensex == true &gt;&gt;\
+
+“你没听说过吗？海伦是从另一个城市里被赶出来的。连她的同乡人都无法接受她，你还这么喜欢她做什么？”
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $dorossex == true &gt;&gt;\
+
+“多罗斯…我倒是听过他曾经写的诗。但他竟然想以他所谓的才华与魅力去引诱一位正派的贵族妇女？那样油嘴滑舌的人真是讨厌呐。”
+&lt;&lt;/if&gt;&gt;\
+&lt;&lt;if $iolliussex == true &gt;&gt;\
+
+“尤其是那个叫伊奥琉斯的家伙，简直令人厌恶，他总作那副模样给谁看嘛？好像世上只有他一个人悲惨又无辜似的。”
+&lt;&lt;/if&gt;&gt;\
+
+雅辛乌斯极尽刻薄地挖苦着你的床伴。
+&lt;&lt;/if&gt;&gt;\
+
+&lt;&lt;if not $choiceMade&gt;&gt;\
     &lt;&lt;link &quot;安抚他&quot;&gt;&gt;
-        &lt;&lt;set $choiceMade = true&gt;&gt;
-        &lt;&lt;set $choice = &quot;comfort&quot;&gt;&gt;
-        &lt;&lt;goto &quot;hyacinusjeally&quot;&gt;&gt;
-    &lt;&lt;/link&gt;&gt;
+        &lt;&lt;set $choiceMade = true&gt;&gt;\
+        &lt;&lt;set $choice = &quot;comfort&quot;&gt;&gt;\
+        &lt;&lt;goto &quot;hyacinusjeally&quot;&gt;&gt;\
+    &lt;&lt;/link&gt;&gt;\
+    
     &lt;&lt;link &quot;无视他&quot;&gt;&gt;
-        &lt;&lt;set $choiceMade = true&gt;&gt;
-        &lt;&lt;set $choice = &quot;ignore&quot;&gt;&gt;
-        &lt;&lt;goto &quot;hyacinusjeally&quot;&gt;&gt;
-    &lt;&lt;/link&gt;&gt;
+        &lt;&lt;set $choiceMade = true&gt;&gt;\
+        &lt;&lt;set $choice = &quot;ignore&quot;&gt;&gt;\
+        &lt;&lt;goto &quot;hyacinusjeally&quot;&gt;&gt;\
+    &lt;&lt;/link&gt;&gt;\
+    
     &lt;&lt;link &quot;责骂他&quot;&gt;&gt;
-        &lt;&lt;set $choiceMade = true&gt;&gt;
-        &lt;&lt;set $choice = &quot;scold&quot;&gt;&gt;
-        &lt;&lt;goto &quot;hyacinusjeally&quot;&gt;&gt;
-    &lt;&lt;/link&gt;&gt;
-&lt;&lt;else&gt;&gt;
-    &lt;&lt;if $choice == &quot;comfort&quot;&gt;&gt;
+        &lt;&lt;set $choiceMade = true&gt;&gt;\
+        &lt;&lt;set $choice = &quot;scold&quot;&gt;&gt;\
+        &lt;&lt;goto &quot;hyacinusjeally&quot;&gt;&gt;\
+    &lt;&lt;/link&gt;&gt;\
+&lt;&lt;else&gt;&gt;\
+    &lt;&lt;if $choice == &quot;comfort&quot;&gt;&gt;\
+    
 “嘘，我知道你在担心什么。雅辛乌斯，这没关系的，你过来听我说...&quot;
 你卸下惯有的威严，竟柔声安抚起他来。雅辛乌斯对此颇为受用，不再多说什么。
-        &lt;&lt;set $hyacinusjeally = 0&gt;&gt;
-    &lt;&lt;elseif $choice == &quot;ignore&quot;&gt;&gt;
+        &lt;&lt;set $hyacinusjeally = 0&gt;&gt;\
+    &lt;&lt;elseif $choice == &quot;ignore&quot;&gt;&gt;\
+    
 &quot;你到底在说什么？”
 你不明白雅辛乌斯出自怎样的心态向你抱怨，你转身离开，毫不理会他的言语。
         &lt;&lt;set $hyacinusjeally = 0&gt;&gt;
-        &lt;&lt;script&gt;&gt;changeHatred(&quot;hyacinus&quot;, 1);&lt;&lt;/script&gt;&gt;
-    &lt;&lt;elseif $choice == &quot;scold&quot;&gt;&gt;
+        &lt;&lt;script&gt;&gt;changeHatred(&quot;hyacinus&quot;, 1);&lt;&lt;/script&gt;&gt;\
+    &lt;&lt;elseif $choice == &quot;scold&quot;&gt;&gt;\
+    
 “你难不成是疯了吗？凭你如今的身份，你竟敢冲撞你的主人吗？！”
 你厉声斥责他的无理取闹，雅辛乌斯别过脸，攥紧拳头一语不发。
-        &lt;&lt;set $hyacinusjeally = 0&gt;&gt;
-        &lt;&lt;script&gt;&gt;changeHatred(&quot;hyacinus&quot;, 2);&lt;&lt;/script&gt;&gt;
-    &lt;&lt;/if&gt;&gt;
-    &lt;&lt;set $choiceMade = false&gt;&gt;
-&lt;&lt;/if&gt;&gt;
+        &lt;&lt;set $hyacinusjeally = 0&gt;&gt;\
+        &lt;&lt;script&gt;&gt;changeHatred(&quot;hyacinus&quot;, 2);&lt;&lt;/script&gt;&gt;\
+    &lt;&lt;/if&gt;&gt;\
+    &lt;&lt;set $choiceMade = false&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
 
 [[继续|bedroom]]</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
