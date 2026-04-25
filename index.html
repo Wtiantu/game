@@ -529,7 +529,7 @@ Hour: $hour:00
 这里的人与我家乡的人倒没什么不同，我在他们眼里的地位也是一样的吧？我已经习惯人们这种态度了…就当我习惯了吧，不然我还能做些什么呢？顺便这种身份也许能给我带来些更实际的好处…你觉得呢？”
 雅辛乌斯挽住你一直胳膊，好像很期待你的回应。
     &lt;&lt;else&gt;&gt;\
-“他们都说你是一个英明勇武的君王，我没见过你上战场、也没见过你与大臣们高谈阔论的样子，但我想他们说的也没错吧。奥古斯图，至尊着，他们就是这么称呼你的名字的，是不是？
+“他们都说你是一个英明勇武的君王，我没见过你上战场、也没见过你与大臣们高谈阔论的样子，但我想他们说的也没错吧。奥古斯图，至尊者，他们就是这么称呼你的名字的，是不是？
 你看，我很明白一点，这种期待有时候是令人生畏的。哦，不…你当然是至尊者，我从来没有否认过这一点，奥古斯图…”
 雅辛乌斯伸出他两只手，一边玩着自己的指头一边与你闲谈。
     &lt;&lt;/if&gt;&gt;\
@@ -790,7 +790,11 @@ Hour: $hour:00
 &lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;set $hour += 2&gt;&gt;
-[[结束谈话|HyacinusBed]] </tw-passagedata><tw-passagedata pid="52" name="HyacinusChat3.2" tags="" position="1275,750" size="100,100">你与雅辛乌斯谈论起了该伊诺斯。
+&lt;&lt;if $HyacinusfromMountain == true&gt;&gt;\
+[[结束谈话|Hyacinusmountain][$HyacinusfromMountain = false]]
+&lt;&lt;else&gt;&gt;\
+[[结束谈话|HyacinusBed]]
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="52" name="HyacinusChat3.2" tags="" position="1275,750" size="100,100">你与雅辛乌斯谈论起了该伊诺斯。
 
 &lt;&lt;set _roll = random(1, 3)&gt;&gt;\
 &lt;&lt;if _roll == 1&gt;&gt;\
@@ -805,7 +809,11 @@ Hour: $hour:00
 &lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;set $hour += 2&gt;&gt;
-[[结束谈话|HyacinusBed]] </tw-passagedata><tw-passagedata pid="53" name="HyacinusChat3.3" tags="" position="1275,850" size="100,100">你与雅辛乌斯谈论起了维利萨留。
+&lt;&lt;if $HyacinusfromMountain == true&gt;&gt;\
+[[结束谈话|Hyacinusmountain][$HyacinusfromMountain = false]]
+&lt;&lt;else&gt;&gt;\
+[[结束谈话|HyacinusBed]]
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="53" name="HyacinusChat3.3" tags="" position="1275,850" size="100,100">你与雅辛乌斯谈论起了维利萨留。
 
 &lt;&lt;set _roll = random(1, 3)&gt;&gt;\
 &lt;&lt;if _roll == 1&gt;&gt;\
@@ -820,7 +828,11 @@ Hour: $hour:00
 &lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;set $hour += 2&gt;&gt;
-[[结束谈话|HyacinusBed]] </tw-passagedata><tw-passagedata pid="54" name="HyacinusChat3.4" tags="" position="1375,850" size="100,100">你与雅辛乌斯谈论起了塞拉皮亚。
+&lt;&lt;if $HyacinusfromMountain == true&gt;&gt;\
+[[结束谈话|Hyacinusmountain][$HyacinusfromMountain = false]]
+&lt;&lt;else&gt;&gt;\
+[[结束谈话|HyacinusBed]]
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="54" name="HyacinusChat3.4" tags="" position="1375,850" size="100,100">你与雅辛乌斯谈论起了塞拉皮亚。
 
 &lt;&lt;set _roll = random(1, 3)&gt;&gt;\
 &lt;&lt;if _roll == 1&gt;&gt;\
@@ -835,7 +847,11 @@ Hour: $hour:00
 &lt;&lt;/if&gt;&gt;\
 
 &lt;&lt;set $hour += 2&gt;&gt;
-[[结束谈话|HyacinusBed]] </tw-passagedata><tw-passagedata pid="55" name="scholaFirst" tags="" position="450,950" size="100,100">你走进军事厅。
+&lt;&lt;if $HyacinusfromMountain == true&gt;&gt;\
+[[结束谈话|Hyacinusmountain][$HyacinusfromMountain = false]]
+&lt;&lt;else&gt;&gt;\
+[[结束谈话|HyacinusBed]]
+&lt;&lt;/if&gt;&gt;\</tw-passagedata><tw-passagedata pid="55" name="scholaFirst" tags="" position="450,950" size="100,100">你走进军事厅。
 这是一栋历史渊源的建筑，雏形来自于帝国先前的文明，在第一女皇征服这片土地后，这栋建筑被保留了下来，并重新修缮。
 
 甫一穿过大门，你见到长桌前站着一个年轻健壮、深色短发的男人。他抬起头，棕色的眼睛看向你。
