@@ -744,6 +744,7 @@ Hour: $hour:00
 这里是“狼窝”。
 帝国最下流与最美丽的人们都在这儿，无论白天黑夜，这间屋子里总回响着欢声笑语。侍从的手上端着盘子，将醇酒与水果流连在人群之中。
 &lt;&lt;if $HyacinusOut == true&gt;&gt;雅辛乌斯在你身边。&lt;&lt;/if&gt;&gt;\
+
     &lt;&lt;if $hour &gt;= 20&gt;&gt;\
         &lt;&lt;set $captainHere = true&gt;&gt;\
     &lt;&lt;else&gt;&gt;\
@@ -897,21 +898,21 @@ Hour: $hour:00
 
 [[离开|JudithRoom]] </tw-passagedata><tw-passagedata pid="46" name="JudithBed" tags="" position="825,1325" size="100,100">朱迪丝面带笑容与你说道：“我的丈夫，我自然知道这是我的义务。然而，我需要在当下的周期中维持自身完整，以此与母神建立连结。于是我不得不拒绝你的请求，请你谅解。”
 
-[[离开|JudithRoom]] </tw-passagedata><tw-passagedata pid="47" name="HyacinusS1" tags="" position="950,1325" size="100,100">&lt;&lt;if $affection.hyacinus &lt;= 20&gt;&gt;
+[[离开|JudithRoom]] </tw-passagedata><tw-passagedata pid="47" name="HyacinusS1" tags="" position="950,1325" size="100,100">&lt;&lt;if $affection.hyacinus &lt;= 20&gt;&gt;\
 雅辛乌斯相当抵触你对他的任何举动，可他到底对你的行为无可奈何。失去武器和人权的他如何能动摇一位君王的权威呢？
-&lt;&lt;elseif $affection.hyacinus &lt;= 40&gt;&gt;
+&lt;&lt;elseif $affection.hyacinus &lt;= 40&gt;&gt;\
 雅辛乌斯向你表示着他的不满，他口中满是拒绝的话语，但并没有做出激烈的抵抗。
-&lt;&lt;elseif $affection.hyacinus &lt;= 60&gt;&gt;
+&lt;&lt;elseif $affection.hyacinus &lt;= 60&gt;&gt;\
 雅辛乌斯默认了你的行为，他别开脸避免与你对视，除此之外并无其他作为。
-&lt;&lt;elseif $affection.hyacinus &lt;= 80&gt;&gt;
+&lt;&lt;elseif $affection.hyacinus &lt;= 80&gt;&gt;\
 雅辛乌斯坦然接受了你对他的大部分行为，他会与你接吻，偶尔配合你的行动做出回应。
-&lt;&lt;elseif $affection.hyacinus &lt;= 90&gt;&gt;
+&lt;&lt;elseif $affection.hyacinus &lt;= 90&gt;&gt;\
 雅辛乌斯完全接受了你对他的所有行为，积极回应你的举措，响应你的每一个需求。
-&lt;&lt;else&gt;&gt;
+&lt;&lt;else&gt;&gt;\
 雅辛乌斯轻笑着将你的脖颈揽至近处，在你耳边与你说道各式缠绵悱恻的话语，&lt;i&gt;向你倾诉他的心愿&lt;/i&gt;。
-&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;\
 
-&lt;&lt;script&gt;&gt;addHour(2);&lt;&lt;/script&gt;&gt;
+&lt;&lt;script&gt;&gt;addHour(2);&lt;&lt;/script&gt;&gt;\
 [[结束|HyacinusBed]]</tw-passagedata><tw-passagedata pid="48" name="temp" tags="place" position="700,1325" size="100,100">&lt;&lt;if $hour == 0&gt;&gt;\
     &lt;&lt;goto &quot;deepnight&quot;&gt;&gt;\
 &lt;&lt;/if&gt;&gt;\
