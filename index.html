@@ -354,7 +354,12 @@ Hour: $hour:00
 &lt;&lt;/if&gt;&gt;\
 这里是你的寝宫。
 你打算:
+
+&lt;&lt;if $hour &lt;= 18&gt;&gt;\
 [[处理政务|things]]
+&lt;&lt;else&gt;&gt;\
+&lt;i&gt;你没有足够的时间处理政务。&lt;/i&gt;
+&lt;&lt;/if&gt;&gt;\
 [[就寝|sleep]]
 &lt;&lt;if $hasHyacinus is true&gt;&gt;\
 [[雅辛乌斯|HyacinusBed]]
@@ -362,7 +367,6 @@ Hour: $hour:00
 &lt;&lt;if $whoreinvite == true &gt;&gt;\
 [[召人入宫|whorechoose]]
 &lt;&lt;/if&gt;&gt;\
-
 
 [[大厅|common]]</tw-passagedata><tw-passagedata pid="9" name="timePass" tags="" position="650,25" size="100,100">&lt;&lt;set $hour += 2&gt;&gt;
 
