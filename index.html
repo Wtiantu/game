@@ -402,19 +402,45 @@ Hour: $hour:00
 &lt;&lt;link &quot;......&quot;&gt;&gt;
     &lt;&lt;set _dream to either(&quot;dream1&quot;, &quot;dream2&quot;, &quot;dream3&quot;, &quot;dream4&quot;)&gt;&gt;
     &lt;&lt;goto _dream&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="dream1" tags="" position="1025,150" size="100,100">1
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="dream1" tags="" position="1025,150" size="100,100">这是一只酒杯。
 
-&lt;&lt;type 200ms&gt;&gt;
-[[醒来|wakeControl]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="dream2" tags="" position="1137.5,150" size="100,100">2
+它很小巧，是金子打的：中央部分前后对称着缀了两颗方形的红钻，另有一颗打磨透亮的深绿猫眼石；仔细看，外壁刻有繁复的图案，是枝叶和花朵；手将酒杯举起时才能发现，哪怕是最不起眼的杯柄处也做出了狼头的浮雕造型。
 
-&lt;&lt;type 200ms&gt;&gt;
-[[醒来|wakeControl]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="dream3" tags="" position="1250,150" size="100,100">3
+这是一只相当尊贵的酒杯。
 
-&lt;&lt;type 200ms&gt;&gt;
+只有尊贵的人才能使用它，是不是？
+来吧，&lt;i&gt;Frater meus（我的兄弟）&lt;/i&gt;。将它献给最尊贵的人吧。
+
+&lt;&lt;type 200ms&gt;&gt;\
 [[醒来|wakeControl]]
-&lt;&lt;/type&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="dream4" tags="" position="1375,150" size="100,100">4
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="13" name="dream2" tags="" position="1137.5,150" size="100,100">一柄刺穿敌人胸膛的骑枪，乘在战马上那&lt;i&gt;金子般的女人&lt;/i&gt;。她风姿无限，用最残忍的招式击碎了每一个质疑她的声音。
+
+让马儿奔驰，让呼声渐强。在境内吹响征服的号角吧。
+让马儿奔驰，让呼声渐强。在境内吹响杀戮的号角吧。
+
+这所有一切皆是尊贵的象征。
+
+阳光终将普照大地。
+
+&lt;&lt;type 200ms&gt;&gt;\
+[[醒来|wakeControl]]
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="14" name="dream3" tags="" position="1250,150" size="100,100">清澈的泉水，林间流淌的溪流。在光线幽暗之处，等待旅人的想必是湖中的仙女。
+
+象征着水与石、风与息的美好仙子。
+她的手纯白好似大理石，她的发优美好似飘扬的丝线，她的笑温润好似白玉。
+
+她的眼是吊死者的眼。
+
+她的颈脉动好似心跳，她的血滚烫好似狼息，她的目光空洞好似虚无。
+
+她的眼是吊死者的眼。
+
+于是，仙女说：
+&lt;i&gt;“这就是救赎。”&lt;/i&gt;
+
+&lt;&lt;type 200ms&gt;&gt;\
+[[醒来|wakeControl]]
+&lt;&lt;/type&gt;&gt;\</tw-passagedata><tw-passagedata pid="15" name="dream4" tags="" position="1375,150" size="100,100">4
 
 &lt;&lt;type 200ms&gt;&gt;
 [[醒来|wakeControl]]
@@ -1003,6 +1029,9 @@ Hour: $hour:00
 雅辛乌斯轻笑着将你的脖颈揽至近处，在你耳边与你说道各式缠绵悱恻的话语，&lt;i&gt;向你倾诉他的心愿&lt;/i&gt;。
 &lt;&lt;/if&gt;&gt;\
 
+&lt;&lt;if $affection.hyacinus &lt;= 30&gt;&gt;\
+    &lt;&lt;script&gt;&gt;changeHatred(&quot;hyacinus&quot;, 1);&lt;&lt;/script&gt;&gt;\
+&lt;&lt;/if&gt;&gt;\
 &lt;&lt;script&gt;&gt;addHour(2);&lt;&lt;/script&gt;&gt;\
 [[结束|HyacinusBed]]</tw-passagedata><tw-passagedata pid="48" name="temp" tags="place" position="700,1325" size="100,100">&lt;&lt;if $hour == 0&gt;&gt;\
     &lt;&lt;goto &quot;deepnight&quot;&gt;&gt;\
@@ -1781,7 +1810,7 @@ Hour: $hour:00
         &lt;&lt;if _event == 1&gt;&gt;\
 “你听说了那件事吗？有一农户在&lt;b&gt;周期内第七日时&lt;/b&gt;前往&lt;b&gt;山间深林&lt;/b&gt;，看见了不得了的东西呢！”
 “什么？这是真的吗？我那天也去了，怎么什么也没遇上呀？”
-“他是&lt;b&gt;晚上&lt;/b&gt;去的。你白天去当然是除了虫子和泥巴什么也没有了。”
+“他是&lt;b&gt;&lt;i&gt;晚上&lt;/i&gt;&lt;/b&gt;去的。你白天去当然是除了虫子和泥巴什么也没有了。”
 &lt;&lt;set $heardhouse = true &gt;&gt;\
         &lt;&lt;elseif _event == 2&gt;&gt;\
             有限事件2的文字（只会出现一次）。\
@@ -1809,7 +1838,7 @@ Hour: $hour:00
 &lt;&lt;/if&gt;&gt;\
 &lt;&lt;script&gt;&gt;addHour(2);&lt;&lt;/script&gt;&gt;
 
-[[离开|commoner]]</tw-passagedata><tw-passagedata pid="108" name="commonerhang" tags="" position="1075,1575" size="100,100">&lt;&lt;set _roll = random(1, 100)&gt;&gt;\
+[[离开|commoner]]</tw-passagedata><tw-passagedata pid="108" name="commonerhang" tags="" position="1050,1550" size="100,100">&lt;&lt;set _roll = random(1, 100)&gt;&gt;\
 \
 &lt;&lt;if $drawnCommonerEvents === undefined&gt;&gt;\
     &lt;&lt;set $drawnCommonerEvents = []&gt;&gt;\
@@ -1920,12 +1949,12 @@ Hour: $hour:00
 “陛下，我们正进行着针对城内不名誉场所的整改讨论。我们认为，那地方严重影响了城内风气，理应封闭起来。”
 
 &lt;&lt;if not $choiceMadeSenate&gt;&gt;\
-    &lt;&lt;link &quot;”我认同你们的决策。“&quot;&gt;&gt;\
+    &lt;&lt;link &quot;“我认同你们的决策。”&quot;&gt;&gt;\
         &lt;&lt;set $choiceMadeSenate = true&gt;&gt;\
         &lt;&lt;set $senateChoice = &quot;obey&quot;&gt;&gt;\
         &lt;&lt;goto &quot;senatebordellocontinue&quot;&gt;&gt;\
     &lt;&lt;/link&gt;&gt;
-    &lt;&lt;link &quot;”这不是你们说了算的。“&quot;&gt;&gt;\
+    &lt;&lt;link &quot;“这不是你们说了算的。”&quot;&gt;&gt;\
         &lt;&lt;set $choiceMadeSenate = true&gt;&gt;\
         &lt;&lt;set $senateChoice = &quot;reject&quot;&gt;&gt;\
         &lt;&lt;goto &quot;senatebordellocontinue&quot;&gt;&gt;\
